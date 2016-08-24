@@ -14,14 +14,20 @@ function queryUrl(url) {
   return obj;
 }
 
-
 // ————————————————————————————————
-
-
 function echo(str){
   return console.log(str);
 }
 
 function write(str){
   return document.write(str);
+}
+
+
+function isFunction(obj){
+  return Object.prototype.toString.call(obj) === "[object Function]" ? true : false;
+}
+
+function isArray(obj){
+  return Object.prototype.toString.call(obj) === "[object Array]"? true : false;
 }

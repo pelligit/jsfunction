@@ -1,34 +1,3 @@
-var arr1 = ["first","second",3,4,"six","main"];
-var arr2 = ["first","second",3,4,"six","main"];
-// javascript functions
-// Array
-// properties
-    // length
-// method
-  // arr1.concat(arr2)
-  // every()
-  // filter()
-  // indexOf()
-  // join()
-  // lastIndexOf()
-  // map()
-  // pop()
-  // push()
-  // reverse()
-  // shift()
-  // slice()
-  // some()
-  // sort()
-  // splice()
-  // toString()
-  // unshift()
-  // valueOf()
-
-
-
-
-
-
 // this function have no effect in a jQuery object,because a jQuery object also has it's property named length
 function isArray(arr){
   var isarray = typeof arr === "object" && arr.length ? return true : false;
@@ -46,7 +15,6 @@ function isArray(arr){
   var isarray = Object.prototype.toString.call(arr,null) === "[object Array]" ? true : false;
   return isarray;
 }
-
 
 // the empty function does not work
 function empty(arr){//not work，the function is wrong
@@ -122,7 +90,6 @@ function unique(arr){
 
 // clear an array,remove the same ele from an array
 function unique(arr){
-  
   var a = [];
   var obj = {}
   for(var i = 0; i < arr.length; i++){
@@ -181,9 +148,7 @@ function arrKey(val,arr){
   return key;
 }
 
-
 // delete a ele from an array by key
 function delByKey(index,arr){
   return arr.slice(0,index).concat(arr.slice(index+1,arr.length));
 }
-

@@ -13,12 +13,37 @@ function wordNext(str){
   return str1;
 }
 
-
-
-
 function strReverse(str){
   return str.split('').reverse().join('');
 }
 
+//check the most letter in a str and count it;
+function letterMost(str){
+  if(!str || str.length === 0)return -1;
+  var arr = str.split("");
+  var num = arr.length;
+  var obj = {}
+  for(var i = 0; i < num; i++){
+    if(!obj[arr[i]]){
+      obj[arr[i]] = 1;
+    }else{
+      obj[arr[i]] = obj[arr[i]] + 1;
+    }
+  }
+
+  var min = 0;
+  var letter = "";
+  for(var o in obj){
+    if(obj[o] > min){
+      min = obj[o];
+      letter = o;
+    }
+  }
+
+  return {
+    name : letter,
+    count : min
+  }
+}
 
 
