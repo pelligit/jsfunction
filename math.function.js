@@ -23,7 +23,7 @@ function multiplyThreeTime(x){
     return x * x * x;
 }
 
-// 返回倒数
+// example x=2 then return 1/2
 function backwards(x){
   if(x === null)return 0;
   var val;
@@ -43,7 +43,7 @@ function rad2deg(rad){
 }
 
 
-// 随机数,第三个参数是保留的小数位(0-20)
+// random from a to b
 function radomFromTo(a,b,hold){
   var hd;
   hold !== null && typeof hold === 'number' && hold > 0 && hold < 20 ? hd = hold : hd = 0;

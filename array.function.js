@@ -45,7 +45,7 @@ function arrRepeat(arr){
 function unique(arr){
   var arr1 = [],tag = false;
   for(var i = 0,num = arr.length; i < num; i++){
-    // 遍历数组
+    // loop the array
     for(var j = 0; j < arr1.length; j++){
       if(arr[i] === arr1[j]){
         tag = true;

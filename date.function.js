@@ -50,7 +50,7 @@ function earlyMorning(){
 
 //2016-10-12
 function dayReduce(day1,day2){
-  //两个日期之间的插值
+  //interpolation between two dates
   var ymd1 = day1.split("-");
   var y1 = parseInt(ymd1[0]),
       m1 = parseInt(ymd1[1] - 1),
