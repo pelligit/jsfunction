@@ -129,3 +129,50 @@ function addClass(ele,class_name){
 }
 // format html
 // format color[hsl,rgb,color name]
+
+function siblings(cur_node){
+  var arr = [];
+  var par = cur_node.parentNode;
+  var all = par.childNodes;
+  var all_node = getTagNode(all);
+  var num = all_node.length;
+  for(var i = 0; i < num; i++){
+    if(all_node[i] === cur_node){
+      continue;
+    }else{
+      arr.push(all_node[i]);
+    }
+  }
+  return arr;
+}
+
+function children(cur_node){
+  var chil = cur_node.childNodes;
+  var arr = getTagNode(chil);
+  return arr;
+}
+
+function parent(cur_node){
+  return cur_node.parentNode;
+}
+
+function pre(cur_node){
+  return cur_node.previousSibling;
+}
+
+function next(cur_node){
+  return cur_node.nextSibling;
+}
+
+function getTagNode(nodelist){
+  var num_node = nodelist.length;
+  var tag_node = [];
+  for(var j = 0; j < num_node; j++){
+    if(nodelist[j].nodeType !== 1){
+      continue;
+    }else{
+      tag_node.push(nodelist[j]);
+    }
+  }
+  return tag_node;
+}
